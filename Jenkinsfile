@@ -13,7 +13,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 echo 'Building docker image for html page'
-                bat 'docker build -t static-html-site'
+                bat 'docker build -t static-html-site .'
             }
         }
         stage('Deploy docker container'){
